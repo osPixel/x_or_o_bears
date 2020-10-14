@@ -1,0 +1,49 @@
+Speichern:
+
+window.localStorage.setItem("key", "data");
+
+Gespeichert werden können Zeichenketten, Zahlen, Fließkommazahlen (127.15), Boolsche Werte (true/false) und Arrays dabei geht allerdings das Format verloren.
+
+var ar = new Array("100", "200");
+window.localStorage.setItem("key", ar);
+console.log(window.localStorage.getItem("key")); // Ausgabe: 100,200
+
+Auslesen:
+var inhalt = window.localStorage.getItem("key");
+
+Löschen:
+window.localStorage.removeItem("key");
+
+Spielstand zu Beginn:
+
+var Spielstand = [null, null, null, null, null, null, null, null, null];
+Spielstand[0]="X";
+var Spielstand = [X, null, null, null, null, null, null, null, null];
+
+check Spielstand
+Sieg X =
+["X", "X", "X", null, null, null, null, null, null]
+[null, null, null, "X", "X", "X", null, null, null]
+[null, null, null, null, null, null, "X", "X", "X"]
+["X", null, null, "X", null, null, "X", null, null]
+[null, "X", null, null, "X", null, null, "X", null]
+[null, null, "X", null, null, "X", null, null, "X"]
+["X", null, null, null, "X", null, null, null, "X"]
+[null, null, "X", null, "X", null, "X", null, null]
+
+Sieg O =
+["O", "O", "O", null, null, null, null, null, null]
+[null, null, null, "O", "O", "O", null, null, null]
+[null, null, null, null, null, null, "O", "O", "O"]
+["O", null, null, "O", null, null, "O", null, null]
+[null, "O", null, null, "O", null, null, "O", null]
+[null, null, "O", null, null, "O", null, null, "O"]
+["O", null, null, null, "O", null, null, null, "O"]
+[null, null, "O", null, "O", null, "O", null, null]
+
+Spielfeld voll =
+for (let i=0; i<Spielstand.length; i++) {
+   if (Spielstand[i] != "null") {
+      console.log("Spielfeld ist voll!");
+   }
+}

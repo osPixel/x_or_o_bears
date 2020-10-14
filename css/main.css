@@ -1,0 +1,57 @@
+body {
+background-color: #bae3f4;
+color: #1b4251;
+font-family: arial, helvetica;
+font-size: 180%;
+}
+
+#button1 {
+  font-size: 32px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#SpielerStatusAnzeige {
+font-size: 36px;
+font-style: bold;
+}
+
+#spielfeld {
+width: 490px;
+height: 490px;
+display: grid;
+grid-template-columns: 150px 150px 150px;
+grid-template-rows: 150px 150px 150px;
+grid-gap: 10px;
+background-color: #444;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.neutral {
+width: 150px;
+height: 150px;
+border-radius: 10px;
+background-color: #4af2ad;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.spielerblau {
+width: 150px;
+height: 150px;
+border-radius: 10px;
+background-image: url('../img/pandi.png');
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.spielergelb {
+width: 150px;
+height: 150px;
+border-radius: 10px;
+/* background-color: yellow; */
+background-image: url('../img/maedchen.png');
+margin-left: 10px;
+margin-top: 10px;
+}
